@@ -3,11 +3,13 @@ var VideoListView = Backbone.View.extend({
     this.collection.on('sync', function() {
       this.render();
     }, this);
+
   },
   
   render: function() {
     this.$el.children().detach();
     this.$el.html(this.template());
+    // alert(this.collection.length);
     this.collection.forEach(this.renderVideo, this);
   },
 

@@ -7,10 +7,8 @@ var AppView = Backbone.View.extend({
     this.render();
   },
 
-
   render: function() {
     this.$el.html(this.template());
-
 
     new VideoPlayerView({
       el: this.$('.player'),

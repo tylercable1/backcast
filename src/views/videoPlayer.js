@@ -1,18 +1,7 @@
 var VideoPlayerView = Backbone.View.extend({
   initialize: function() {
 
-    // console.log(this);
-    // this.currentVideo = this.collection.at(0);
-    // var temp = this;
-
     this.listenTo(this.collection, 'select', this.selectVideo);
-
-      // temp = this.cid;
-      // console.log(temp);
-    // this.currentVideo = 
-
-    // this.set({id: this.collection.at([0]).id, title: this.collection.models.at([0]).title, 
-    //   description: this.collection.models.at([0]).description, thumbnail: this.collection.models.at([0]).video});
 
   },
   selectVideo: function(selection) {

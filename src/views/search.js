@@ -1,12 +1,13 @@
 var SearchView = Backbone.View.extend({
 
   events: {
-    'keydown' : 'keyAction',
-    'click .btn': 'clickHandler'
+    'keyup' : 'keyAction',
+    'click button': 'clickHandler'
   },
   keyAction: function(e) {
-    if (e.which === 13) {
+    if (e.keyCode === 13) {
       this.collection.search($('.search .form-control').val());
+      $('.search .form-control').val('');
     }
   },
 
